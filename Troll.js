@@ -1,3 +1,11 @@
+// 😏 Troll Loading Screen
+window.addEventListener("load", () => {
+  const loading = document.getElementById("loadingScreen");
+  setTimeout(() => {
+    loading.classList.add("hidden");
+  }, Math.random() * 2000 + 1500); // Random delay 1.5–3.5s 😈
+});
+
 const memeButton = document.getElementById("memeButton");
 const loveButton = document.getElementById("loveButton");
 const chaosButton = document.getElementById("chaosButton");
