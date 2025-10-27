@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Troll Machine 😈</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* 💅 Troll Theme Additions */
+    body {
+      background: linear-gradient(135deg, #c2c5aa, #a68a64);
+      font-family: 'Poppins', sans-serif;
+      color: #333d29;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+      transition: background 0.8s ease;
+      overflow: hidden;
+    }
+
+    .container {
+      background: #b6ad90;
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      max-width: 500px;
+      width: 100%;
+      transition: transform 0.3s ease;
+      z-index: 2;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 1.7rem;
+      margin-bottom: 25px;
+      color: #582f0e;
+    }
+
+    button {
+      display: block;
+      margin: 20px auto;
+      background-color: #a67c52;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+    }
+
+    #memeContainer {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #memeImage {
+      max-width: 350px;
+      margin: 0 auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+      display: none;
+      opacity: 0;
+      transition: opacity 0.8s ease;
+    }
+
+    #memeImage.show {
+      display: block;
+      opacity: 1;
+    }
+
+    #memeQuote {
+      font-style: italic;
+      margin-top: 15px;
+      color: #333d29;
+      opacity: 0;
+      transition: opacity 1s ease;
+    }
+
+    #memeQuote.show {
+      opacity: 1;
+    }
+
+    /* ✨ Troll Buttons Color Vibe */
+    #memeButton {
+      background-color: #8b5e34;
+    }
+    #memeButton:hover {
+      background-color: #a76f45;
+    }
+
+    #loveButton {
+      background-color: #c66565;
+    }
+    #loveButton:hover {
+      background-color: #b85050;
+    }
+
+    #chaosButton {
+      background-color: #d4a017;
+      animation: pulse 2s infinite alternate;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 10px #ffd15c; }
+      100% { box-shadow: 0 0 25px #ffa600; }
+    }
+
+    /* 💥 CHAOS EFFECTS */
+    .shake {
+      animation: shake 0.6s infinite;
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: translate(0, 0); }
+      20% { transform: translate(-10px, 5px); }
+      40% { transform: translate(10px, -5px); }
+      60% { transform: translate(-5px, 10px); }
+      80% { transform: translate(5px, -10px); }
+    }
+
+    .flash {
+      animation: flash 0.6s alternate 3;
+    }
+
+    @keyframes flash {
+      0% { background: #ff0000; }
+      50% { background: #00ffea; }
+      100% { background: #ffd000; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>The Troll Machine 😈</h1>
+    <button id="memeButton">Press me 😏</button>
+    <button id="loveButton">No, press ME 💅</button>
+    <button id="chaosButton">Fine, last one then...</button>
+
+    <div id="memeContainer">
+      <img id="memeImage" src="" alt="Funny troll meme" />
+      <p id="memeQuote"></p>
+    </div>
+  </div>
+
+  <script src="Troll.js"></script>
+</body>
+</html>
+
